@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "2ySoT8Jrddbq1wd8NxeXBC3lIMcgcpJBdnvst9AkfTo=",
+  "Hash": "uJ6+N33AjxMovf/CQSVzPH/qjm8Dodj+p774/gfzo6c=",
   "Source": "FirstASPwebsite",
   "BasePath": "_content/FirstASPwebsite",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\site.css"
+    },
+    {
+      "Identity": "C:\\Users\\Anthony\\source\\repos\\FirstASPwebsite\\FirstASPwebsite\\wwwroot\\data\\posts.json",
+      "SourceId": "FirstASPwebsite",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Anthony\\source\\repos\\FirstASPwebsite\\FirstASPwebsite\\wwwroot\\",
+      "BasePath": "_content/FirstASPwebsite",
+      "RelativePath": "data/posts.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\data\\posts.json"
     },
     {
       "Identity": "C:\\Users\\Anthony\\source\\repos\\FirstASPwebsite\\FirstASPwebsite\\wwwroot\\favicon.ico",

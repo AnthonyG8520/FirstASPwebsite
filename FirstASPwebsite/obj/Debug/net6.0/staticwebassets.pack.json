@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "C:\\Users\\Anthony\\source\\repos\\FirstASPwebsite\\FirstASPwebsite\\wwwroot\\data\\posts.json",
+      "PackagePath": "staticwebassets\\data\\posts.json"
+    },
+    {
       "Id": "C:\\Users\\Anthony\\source\\repos\\FirstASPwebsite\\FirstASPwebsite\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
