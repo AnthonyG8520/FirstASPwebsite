@@ -5,6 +5,13 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Hello There</h1>
+    <h1 class="display-4">ImageArray</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+@foreach (var post in Model.Posts)
+{
+    <img src="@post.ImageUrl">
+    <h2>@post.Description</h2>
+    
+}

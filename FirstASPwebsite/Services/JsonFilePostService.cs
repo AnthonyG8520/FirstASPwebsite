@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using FirstASPwebsite.Models;
+using System.Text.Json;
 
 namespace FirstASPwebsite.Services
 {
@@ -16,11 +17,11 @@ namespace FirstASPwebsite.Services
             get { return Path.Combine(WebHostEnvironment.WebRootPath, "data", "posts.json"); }
         }
 
-        public IEnumerable<Models.Post> GetPosts()
+        public IEnumerable<Post> GetPosts()
         {
             using (var jsonFileReader = File.OpenText(JsonFileName))
             {
-                return JsonSerializer.Deserialize<Models.Post[]>(jsonFileReader.ReadToEnd(),
+                return JsonSerializer.Deserialize<Post[]>(jsonFileReader.ReadToEnd(),
                     new JsonSerializerOptions
                     {
                         PropertyNameCaseInsensitive = true

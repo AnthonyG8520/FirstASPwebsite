@@ -1,36 +1,36 @@
 [
   {
-    "Id": "1",
+    "Id": 1,
     "ImageUrl": "url for photo here",
-    "Description": "awesome new picture",
+    "Description": "awesome new picture"
   },
 
   {
-    "Id": "2",
+    "Id": 2,
     "ImageUrl": "url for photo here",
     "Description": "sweetest picture"
   },
 
   {
-    "Id": "3",
+    "Id": 3,
     "ImageUrl": "url for photo here",
     "Description": "sick photo"
   },
 
   {
-    "Id": "4",
+    "Id": 4,
     "ImageUrl": "url for photo here",
     "Description": "best photo ever"
   },
 
   {
-    "Id": "5",
+    "Id": 5,
     "ImageUrl": "url for photo here",
     "Description": "insane picture"
   },
 
   {
-    "Id": "6",
+    "Id": 6,
     "ImageUrl": "url for photo here",
     "Description": "bestest photo"
   }

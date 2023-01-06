@@ -8,7 +8,7 @@ namespace FirstASPwebsite.Models
 
         public String ImageUrl { get; set; }
 
-        public int Description { get; set; }
+        public String Description { get; set; }
 
         public override string ToString(){
            return JsonSerializer.Serialize<Post>(this);
