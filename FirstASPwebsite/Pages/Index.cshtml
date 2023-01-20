@@ -9,9 +9,14 @@
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
 
-@foreach (var post in Model.Posts)
-{
-    <img src="@post.ImageUrl">
-    <h2>@post.Description</h2>
-    
-}
+<div class="card-columns">
+    @foreach (var post in Model.Posts)
+    {
+        <div class="card">
+            <div class="card-img"><img src="@post.ImageUrl"></div>
+            <div class="card-body">
+                <h5 class="card-description">@post.Description</h5>
+            </div>
+        </div>
+    }
+</div>
