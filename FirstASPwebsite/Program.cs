@@ -1,4 +1,6 @@
+using FirstASPwebsite.Models;
 using FirstASPwebsite.Services;
+using System.Text.Json;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,5 +26,15 @@ app.UseRouting();
 app.UseAuthorization();
 
 app.MapRazorPages();
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapGet("/posts", (context) =>
+    {
+        var posts = app.Services.GetService<JsonFilePostService>().GetPosts();
+        var json = JsonSerializer.Serialize<IEnumerable<Post>>(posts);
+        return context.Response.WriteAsync(json);
+    });
+});
 
 app.Run();
