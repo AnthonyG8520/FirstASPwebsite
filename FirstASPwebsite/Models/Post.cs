@@ -10,6 +10,8 @@ namespace FirstASPwebsite.Models
 
         public String Description { get; set; }
 
+        public int[] Ratings { get; set; }
+
         public override string ToString(){
            return JsonSerializer.Serialize<Post>(this);
         }

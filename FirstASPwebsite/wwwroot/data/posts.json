@@ -2,41 +2,39 @@
   {
     "Id": 1,
     "ImageUrl": "url for photo here",
-    "Description": "awesome new picture"
+    "Description": "awesome new picture",
+    "Ratings": [
+      5
+    ]
   },
-
   {
     "Id": 2,
     "ImageUrl": "url for photo here",
-    "Description": "sweetest picture"
+    "Description": "sweetest picture",
+    "Ratings": null
   },
-
   {
     "Id": 3,
     "ImageUrl": "url for photo here",
-    "Description": "sick photo"
+    "Description": "sick photo",
+    "Ratings": null
   },
-
   {
     "Id": 4,
     "ImageUrl": "url for photo here",
-    "Description": "best photo ever"
+    "Description": "best photo ever",
+    "Ratings": null
   },
-
   {
     "Id": 5,
     "ImageUrl": "url for photo here",
-    "Description": "insane picture"
+    "Description": "insane picture",
+    "Ratings": null
   },
-
   {
     "Id": 6,
     "ImageUrl": "url for photo here",
-    "Description": "bestest photo"
+    "Description": "bestest photo",
+    "Ratings": null
   }
-
-
-
-
-
 ]

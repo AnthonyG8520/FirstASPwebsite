@@ -21,5 +21,13 @@ namespace FirstASPwebsite.Controllers
         {
             return PostsService.GetPosts();
         }
+
+        [HttpGet]
+        [Route("Rate")]
+        public ActionResult Get([FromQuery]long id, [FromQuery]int Rating)
+        {
+            PostsService.AddRating(id, Rating);
+            return Ok();
+        }
     }
 }
