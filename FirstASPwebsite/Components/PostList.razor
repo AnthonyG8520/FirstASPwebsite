@@ -1,0 +1,33 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using FirstASPwebsite.Models
+@using FirstASPwebsite.Services
+@inject JsonFilePostService PostService
+
+<div class="card-columns">
+    @foreach (var post in PostService.GetPosts())
+    {
+        <div class="card">
+            <div class="card-img"><img src="@post.ImageUrl"></div>
+            <div class="card-body">
+                <h5 class="card-description">@post.Description</h5>
+            </div>
+        </div>
+        <div class="card-footer">
+            <small class="text-muted">
+                <button @onclick="(e => SelectPost(post.Id))" data-toggle="modal" data-target="#postModal" class="btn btn-primary">More Info</button>
+            </small>
+        </div>
+    }
+</div>
+
+
+@code {
+    Post selectPost;
+    long selectPostId;
+
+    void SelectPost(long postId)
+    {
+        selectPostId = postId;
+        selectPost = PostService.GetPosts().First(x => x.Id == postId);
+    }
+}
