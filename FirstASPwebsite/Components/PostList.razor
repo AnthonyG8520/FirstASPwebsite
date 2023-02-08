@@ -19,11 +19,13 @@
         </div>
     }
 </div>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
 
 @if (selectedPost != null)
 {
-    <div class="modal fade" id="postModal" tabindex="-1" role="dialog" aria-labelledby="productTitle" aria-hidden="true">
+    <div class="" id="postModal" tabindex="-1" role="dialog" aria-labelledby="productTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -42,6 +44,28 @@
                     </div>
                 </div>
                 <div class="modal-footer">
+                    @if(voteCount == 0)
+                    {
+                        <span>Be the first to vote!</span>
+                    }
+                    else
+                    {
+                        <span>@voteCount @voteLabel</span>
+                    }
+
+                    @for(int i =1; i <= 5; i++)
+                    {
+                        var currentStar = i;
+                        if(i <= currentRating)
+                        {
+                            <span class="fa-star fa checked" @onclick="(e => submitRating(currentStar))"></span>
+                        }
+                        else
+                        {
+                            <span class="fa-star fa" @onclick="(e => submitRating(currentStar))"></span>
+
+                        }
+                    }
                 </div>
             </div>
         </div>
@@ -50,12 +74,38 @@
 
 
 @code {
-    Post selectedPost;
-    long selectedPostId;
+        Post selectedPost;
+        long selectedPostId;
 
-    void SelectPost(long postId)
-    {
-        selectedPostId = postId;
-        selectedPost = PostService.GetPosts().First(x => x.Id == postId);
+        void SelectPost(long postId)
+        {
+            selectedPostId = postId;
+            selectedPost = PostService.GetPosts().First(x => x.Id == postId);
+            getCurrentRating();
+        }
+
+        int currentRating = 0;
+        int voteCount = 0;
+        string voteLabel;
+
+        void getCurrentRating()
+        {
+            if (selectedPost.Ratings == null)
+            {
+                currentRating = 0;
+                voteCount = 0;
+            }
+            else
+            {
+                voteCount = selectedPost.Ratings.Count();
+                voteLabel = voteCount > 1 ? "Votes" : "Vote";
+                currentRating = selectedPost.Ratings.Sum() / voteCount;
+            }
+        }      
+        
+        void submitRating(int rating)
+        {
+            PostService.AddRating(selectedPostId, rating);
+            SelectPost(selectedPostId);
+        }
     }
-}
